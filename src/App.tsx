@@ -205,7 +205,7 @@ export default function App() {
                 </div>
                 
                 <div className="flex items-center justify-between opacity-40">
-                  <span className="tracking-[0.2em] text-[9px] uppercase">FY {selectedReport.year} briefing</span>
+                  <span className="tracking-[0.2em] text-[9px] uppercase">Campbell Journal 2026</span>
                   <a href="#" className="font-bold uppercase text-[9px] tracking-widest hover:opacity-50">
                     PDF Document
                   </a>
@@ -225,14 +225,14 @@ export default function App() {
               <h2 className="font-bold text-[11px] md:text-[13px] mb-8">News</h2>
               <div className="space-y-12">
                 <div className="space-y-2">
-                  <span className="text-[9px] opacity-30 tracking-widest font-mono uppercase">15.05.2024</span>
+                  <span className="text-[9px] opacity-30 tracking-widest font-mono uppercase">15.05.2026</span>
                   <h3 className="font-bold">Exhibition: The Silicon Frontier in London</h3>
                   <p className="text-black/60">Opening next week at the Industrial Design Museum. Featuring oversized photographic prints and physical silicon artifacts.</p>
                 </div>
                 <div className="space-y-2">
-                  <span className="text-[9px] opacity-30 tracking-widest font-mono uppercase">02.04.2024</span>
+                  <span className="text-[9px] opacity-30 tracking-widest font-mono uppercase">02.04.2026</span>
                   <h3 className="font-bold">Molecular Weaves Briefing Released</h3>
-                  <p className="text-black/60">Our latest intelligence report on bio-engineered textiles is now available for download.</p>
+                  <p className="text-black/60">My latest intelligence report on bio-engineered textiles is now available for download.</p>
                 </div>
               </div>
             </motion.div>
@@ -249,10 +249,7 @@ export default function App() {
               <h2 className="font-bold text-[11px] md:text-[13px]">Methodology</h2>
               <div className="space-y-6 text-black/80 leading-relaxed">
                 <p>
-                  We operate at the intersection of technical systems and visual storytelling. Our product is a premium, visual-heavy PDF report that combines rigorous research with professional photojournalism.
-                </p>
-                <p>
-                  By combining high-resolution photojournalism with engineering-grade research, we create Campbell Journal Briefings that aren't just informative—they are definitive.
+                  I produce deep-dive visual reports that bridge the gap between complex technical research and in-depth storytelling. I help professionals understand the systems shaping their industry through rigorous research and photojournalism.
                 </p>
                 <p className="text-black/40 italic">
                   Turning complex systems into clear visual narratives.
@@ -272,7 +269,7 @@ export default function App() {
               <h2 className="font-bold text-[11px] md:text-[13px]">Contact</h2>
               <div className="space-y-12">
                 <p className="text-black/60 leading-relaxed">
-                  Do you have a complex industrial process or technical breakthrough that needs a clear narrative? We accept private commissions for deep-dive audits and reporting.
+                  Do you have a topic you would like to get my commentary on? I accept private commissions on interesting topics.
                 </p>
                 
                 <div className="space-y-2">
@@ -282,7 +279,7 @@ export default function App() {
 
                 <div className="space-y-2">
                   <div className="uppercase tracking-[0.2em] font-bold text-[9px] text-black/30">Operations</div>
-                  <div className="text-black/60">London / Berlin / Tokyo</div>
+                  <div className="text-black/60">UK</div>
                 </div>
               </div>
             </motion.div>
