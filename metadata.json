@@ -1,6 +1,6 @@
 {
   "name": "Campbell Journal",
-  "description": "Professional portfolio for Technical Research and Visual Journalism by Campbell Journal.",
+  "description": "Deep-dive visual reports that bridge the gap between complex technical research and in-depth storytelling. Campbell Journal helps professionals understand the systems shaping their industry.",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
