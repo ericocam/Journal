@@ -51,6 +51,25 @@ export default function App() {
     }
   };
 
+  // Preload adjacent images in browser cache for instant transitions
+  React.useEffect(() => {
+    if (activeView === 'home') {
+      const nextIdx = (currentProjectIndex + 1) % REPORTS.length;
+      const prevIdx = (currentProjectIndex - 1 + REPORTS.length) % REPORTS.length;
+      const img1 = new Image();
+      img1.src = REPORTS[nextIdx].images[0];
+      const img2 = new Image();
+      img2.src = REPORTS[prevIdx].images[0];
+    } else if (activeView === 'works' && selectedReport) {
+      const nextIdx = (currentImageIndex + 1) % selectedReport.images.length;
+      const prevIdx = (currentImageIndex - 1 + selectedReport.images.length) % selectedReport.images.length;
+      const img1 = new Image();
+      img1.src = selectedReport.images[nextIdx];
+      const img2 = new Image();
+      img2.src = selectedReport.images[prevIdx];
+    }
+  }, [activeView, currentProjectIndex, currentImageIndex, selectedReport]);
+
   return (
     <div className="flex flex-col md:flex-row min-h-screen bg-white text-black p-6 md:p-12 lg:p-20 gap-10 md:gap-12 lg:gap-20">
       {/* Sidebar Navigation */}
@@ -130,16 +149,16 @@ export default function App() {
               </div>
 
               {/* Home Image View (First image of current project) */}
-              <div className="relative overflow-hidden bg-neutral-50/50">
-                <AnimatePresence mode="wait">
+              <div className="relative overflow-hidden bg-neutral-50/50 grid [&>*]:[grid-area:1/1]">
+                <AnimatePresence initial={false}>
                   <motion.img 
                     key={currentProjectIndex}
                     src={REPORTS[currentProjectIndex].images[0]}
                     alt={REPORTS[currentProjectIndex].title}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3 }}
+                    exit={{ opacity: 0, pointerEvents: 'none' }}
+                    transition={{ duration: 0.15 }}
                     className="w-full max-h-[75vh] object-contain grayscale brightness-100 cursor-crosshair"
                     onClick={(e) => handleImageClick(e, nextHomeProject, prevHomeProject)}
                     referrerPolicy="no-referrer"
@@ -185,16 +204,16 @@ export default function App() {
               </div>
 
               {/* Single Image View */}
-              <div className="relative overflow-hidden bg-neutral-50/50">
-                <AnimatePresence mode="wait">
+              <div className="relative overflow-hidden bg-neutral-50/50 grid [&>*]:[grid-area:1/1]">
+                <AnimatePresence initial={false}>
                   <motion.img 
                     key={currentImageIndex}
                     src={selectedReport.images[currentImageIndex]}
                     alt={`${selectedReport.title} ${currentImageIndex + 1}`}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3 }}
+                    exit={{ opacity: 0, pointerEvents: 'none' }}
+                    transition={{ duration: 0.15 }}
                     className="w-full max-h-[75vh] object-contain grayscale brightness-100 cursor-crosshair"
                     onClick={(e) => handleImageClick(e, nextImage, prevImage)}
                     referrerPolicy="no-referrer"

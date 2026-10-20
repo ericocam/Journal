@@ -2,9 +2,9 @@
 <img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
 </div>
 
-# Run and deploy your AI Studio app
+# Campbell Journal
 
-This contains everything you need to run your app locally.
+Deep-dive visual reports that bridge the gap between complex technical research and in-depth storytelling.
 
 View your app in AI Studio: https://ai.studio/apps/df4a3456-25f5-427f-a382-9f9e1f9c9fe6
 
